@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- This is the title that appears on the browser tab -->
+    <title>Student Registration</title>
+</head>
+
+<body>
+
+    <!-- h2 is a heading. Bigger number = smaller heading -->
+    <h2>Registration Form</h2>
+
+    <!-- 
+        The form element collects user input.
+            method="get" sends data via the URL (good for learning & demos)
+                ?firstname=John&lastname=Doe&email=test@email.com
+            method="post", URL is clean, data is sent behind scenes and password is not exposed
+    -->
+    <form action="success.html" method="get">
+
+        <!-- 
+            Label + input pairs help users AND screen readers.
+            'for' should match the input's 'id'
+        -->
+        <label for="firstname">First Name:</label><br>
+        <!-- required = user MUST fill this before submitting -->
+        <input type="text" id="firstname" name="firstname" placeholder="Enter first name" required>
+        <br><br>
+
+        <label for="lastname">Last Name:</label><br>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter last name" required>
+        <br><br>
+
+        <!-- 
+            fieldset groups related inputs together
+            legend gives the group a title
+        -->
+        <fieldset>
+            <legend>Gender</legend>
+
+            <!-- 
+                Radio buttons allow ONLY ONE selection
+                All radios must share the same name
+            -->
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </fieldset>
+
+        <br>
+
+        <label for="email">Email Address:</label><br>
+        <!-- 
+            type="email" automatically checks for @ and .
+        -->
+        <input type="email" id="email" name="email" placeholder="example@email.com">
+        <br><br>
+
+        <label for="password">Password:</label><br>
+        <!-- 
+            type="password" hides characters for security
+        -->
+        <!-- 
+            maxlength limits number of characters
+            Try typing more than 12 — browser blocks it
+        -->
+        <input type="password" id="password" name="password" maxlength="12">
+        <br><br>
+
+        <label for="birthday">Birthday:</label><br>
+        <!-- 
+            type="date" gives a calendar picker
+        -->
+        <input type="date" id="birthday" name="birthday">
+        <br><br>
+
+        <!-- Terms & conditions checkbox -->
+        <input type="checkbox" id="terms" name="terms">
+        <label for="terms">I agree to the terms and conditions</label>
+        <br><br>
+
+        <!-- Submit button sends the form data -->
+        <button type="submit">Register</button>
+
+    </form>
+
+</body>
+
+</html>
