@@ -1,0 +1,96 @@
+<!--
+    This tells the browser that this file is an HTML document.
+    Everything related to the webpage goes inside <html>.
+-->
+<html>
+
+<!--
+    The <head> section contains information ABOUT the page.
+    Users usually do NOT see this content on the webpage.
+-->
+<head>
+
+    <!--
+        The <title> sets the text shown on the browser tab.
+    -->
+    <title>Pokemon</title>
+
+    <!--
+        Headings like <h1> normally belong in <body>, not <head>.
+        This still works in browsers, but later we will fix structure.
+    -->
+    <h1>First Gen Pokemon Chart</h1>
+
+    <!--
+        <table> is used to display data in rows and columns.
+        border="1" adds a visible border (simple beginner styling).
+    -->
+    <table border="1">
+
+        <!--
+            <tr> means "table row"
+            This is the HEADER row of the table.
+        -->
+        <tr>
+            <!-- <th> means "table heading" (bold + centered by default) -->
+            <th>Image</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Offline Image</th>
+        </tr>
+
+        <!-- First data row -->
+        <tr>
+
+            <!--
+                <img> displays an image.
+                src  → image URL
+                width/height → image size
+                alt → text shown if image fails (important for accessibility)
+            -->
+            <th>
+                <img
+                    src="https://images.unsplash.com/photo-1549480017-d76466a4b7e8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dGlnZXJ8ZW58MHx8MHx8fDA%3D"
+                    width="200"
+                    height="121"
+                    alt="Tiger">
+            </th>
+
+            <!-- Text data cells -->
+            <th>Atindra Shekhar</th>
+            <th>Humanoid</th>
+            <th>Tiger</th>
+        </tr>
+
+        <!-- Second data row -->
+        <tr>
+            <th>
+                <img
+                    src="https://images.unsplash.com/photo-1570631810442-f20e700b0ce1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=60"
+                    width="200"
+                    height="121"
+                    alt="Rose">
+            </th>
+            <th>Rose</th>
+            <th>Flower</th>
+            <th>Living Thing</th>
+        </tr>
+
+        <!-- Third data row -->
+        <tr>
+            <th>
+                <img
+                    src="https://images.unsplash.com/photo-1570654306248-bfbbf2caf903?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=60"
+                    width="200"
+                    height="121"
+                    alt="Land End">
+            </th>
+            <th>Earth</th>
+            <th>Land</th>
+            <th>Natural Landform</th>
+        </tr>  
+
+    </table>
+
+</head>
+</html>
