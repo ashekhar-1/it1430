@@ -4,21 +4,21 @@
   <title>Town Hall CSS Demo</title>
 
   <!-- 1) EXTERNAL CSS (recommended for real projects)
-       This matches the slide: <link rel="stylesheet" href="styles/main.css">
-       External styles are applied first. :contentReference[oaicite:4]{index=4} -->
+       This matches the slide: <link rel="stylesheet" href="main.css">
+       External styles are applied first. : -->
   <link rel="stylesheet" href="main.css" />
 
   <!-- 2) EMBEDDED CSS (in the <head>)
        These rules are applied AFTER external rules, so they can override them
-       when specificity is the same. :contentReference[oaicite:5]{index=5} -->
+       when specificity is the same. : -->
   <style>
     /* Example: tweak the page background using an embedded rule */
     body {
-      /* rgba() is a CSS3 way to do color + transparency :contentReference[oaicite:6]{index=6} */
+      /* rgba() is a CSS3 way to do color + transparency : */
       background: rgba(255, 255, 204, 0.75);
     }
 
-    /* Example: multiple selectors (comma-separated) :contentReference[oaicite:7]{index=7} */
+    /* Example: multiple selectors (comma-separated) : */
     h1, h2, h3 {
       /* If main.css sets colors, this may override it if specificity matches */
       letter-spacing: 0.5px;
@@ -30,7 +30,7 @@
   <header id="top">
     <!-- 3) INLINE CSS (style="")
          Inline styles are applied LAST and usually override external/embedded.
-         This matches the slide’s “External, Embedded, then Inline”. :contentReference[oaicite:8]{index=8} -->
+         This matches the slide’s “External, Embedded, then Inline”. : -->
     <h1 style="font-size: 230%; color: #00F;">
       San Joaquin Valley Town Hall
     </h1>
@@ -41,7 +41,7 @@
     <section class="card">
       <h2>This Season’s Speakers</h2>
 
-      <!-- class selector demo: ul.speakers {...} :contentReference[oaicite:9]{index=9} -->
+      <!-- class selector demo: ul.speakers {...} : -->
       <ul class="speakers">
         <li>January: <a href="speakers/brancaccio.html">David Brancaccio</a></li>
         <li>February: <a href="speakers/fitzpatrick.html">Robert Fitzpatrick</a></li>
@@ -65,7 +65,7 @@
         <label for="email">Email:</label>
         <input id="email" name="email" type="email" placeholder="name@school.edu" />
 
-        <!-- Attribute selector demo: input[type="submit"] {...} :contentReference[oaicite:10]{index=10} -->
+        <!-- Attribute selector demo: input[type="submit"] {...} : -->
         <input type="submit" value="Join Newsletter" />
       </form>
     </section>
