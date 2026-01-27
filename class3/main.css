@@ -19,16 +19,16 @@
 
 /* TYPE selector: targets all <body> elements */
 body {
-  /* Font-family fallback system: try first, then next... :contentReference[oaicite:11]{index=11} */
+  /* Font-family fallback system: try first, then next... : */
   font-family: Arial, Helvetica, sans-serif;
 
-  /* Font size can be % (relative to browser default) :contentReference[oaicite:12]{index=12} */
+  /* Font size can be % (relative to browser default) : */
   font-size: 100%;
 
-  /* Units using em: scalable spacing :contentReference[oaicite:13]{index=13} */
+  /* Units using em: scalable spacing : */
   margin: 2em;
 
-  /* Hex color example (background). Slides show #FFFFCC / shorthand idea :contentReference[oaicite:14]{index=14} */
+  /* Hex color example (background). Slides show #FFFFCC / shorthand idea : */
   background-color: #FFFFCC;
 
   /* RGB example (text color) */
@@ -37,7 +37,7 @@ body {
 
 /* ID selector: targets the element with id="top" */
 #top {
-  /* Example from PPT: border-bottom + padding using em :contentReference[oaicite:15]{index=15} */
+  /* Example from PPT: border-bottom + padding using em : */
   padding-bottom: 0.75em;
   border-bottom: 3px solid #000;
 }
@@ -45,16 +45,16 @@ body {
 /* CLASS selector: targets elements with class="tagline" */
 .tagline {
   font-size: 0.95em;
-  opacity: 0.9; /* “opacity-value” idea (CSS3 transparency concept) :contentReference[oaicite:16]{index=16} */
+  opacity: 0.9; /* “opacity-value” idea (CSS3 transparency concept) : */
 }
 
 /* TYPE selector for headings */
 h1 {
-  /* Text shadow syntax: offsetX offsetY blur color :contentReference[oaicite:17]{index=17} */
+  /* Text shadow syntax: offsetX offsetY blur color : */
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
 }
 
-/* MULTIPLE selectors: apply same rules to many elements :contentReference[oaicite:18]{index=18} */
+/* MULTIPLE selectors: apply same rules to many elements : */
 h2, h3 {
   color: #0033aa;
 }
@@ -69,28 +69,28 @@ h2, h3 {
 }
 
 /* COMBINED selector: “a class within an element”
-   ul.speakers means: <ul class="speakers"> ... :contentReference[oaicite:19]{index=19} */
+   ul.speakers means: <ul class="speakers"> ... : */
 ul.speakers {
   list-style-type: square;
   padding-left: 1.2em;
 }
 
 /* RELATIONAL selector (descendant):
-   main li means: any <li> that is inside <main> (at any depth) :contentReference[oaicite:20]{index=20} */
+   main li means: any <li> that is inside <main> (at any depth) : */
 main li {
   font-size: 95%;
   margin: 0.35em 0;
 }
 
 /* RELATIONAL selector (descendant):
-   ul a means: any <a> inside a <ul> :contentReference[oaicite:21]{index=21} */
+   ul a means: any <a> inside a <ul> : */
 ul a {
   color: green;
   text-decoration: none;
 }
 
 /* PSEUDO-CLASSES:
-   :link :visited :hover :focus etc. are mentioned in the PPT :contentReference[oaicite:22]{index=22} */
+   :link :visited :hover :focus etc. are mentioned in the PPT : */
 a:link {
   color: green;
 }
@@ -102,22 +102,22 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-/* TEXT indentation + alignment examples :contentReference[oaicite:23]{index=23} */
+/* TEXT indentation + alignment examples : */
 main p {
   text-indent: 2em;
 }
 
-/* Adjacent sibling selector: h2 + p means “the first <p> immediately after an <h2>” :contentReference[oaicite:24]{index=24} */
+/* Adjacent sibling selector: h2 + p means “the first <p> immediately after an <h2>” : */
 h2 + p {
   margin-top: 0.5em;
 }
 
-/* General sibling selector (CSS3): h2 ~ p means “all <p> after an <h2> (same parent)” :contentReference[oaicite:25]{index=25} */
+/* General sibling selector (CSS3): h2 ~ p means “all <p> after an <h2> (same parent)” : */
 h2 ~ p {
   margin-left: 1em;
 }
 
-/* ATTRIBUTE selectors :contentReference[oaicite:26]{index=26} */
+/* ATTRIBUTE selectors : */
 *[href] {
   /* Any element that has an href attribute */
   font-size: 100%;
@@ -131,14 +131,14 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* FONT shorthand demo (style weight size/line-height family) :contentReference[oaicite:27]{index=27} */
+/* FONT shorthand demo (style weight size/line-height family) : */
 footer p {
   font: italic 80%/140% "Times New Roman", Times, serif;
-  text-align: right; /* alignment example :contentReference[oaicite:28]{index=28} */
+  text-align: right; /* alignment example : */
   margin-top: 2em;
 }
 
-/* PSEUDO-ELEMENT demo: make the first letter bigger :contentReference[oaicite:29]{index=29} */
+/* PSEUDO-ELEMENT demo: make the first letter bigger : */
 main p:first-child::first-letter {
   font-size: 150%;
 }
