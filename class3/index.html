@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Town Hall CSS Demo</title>
+
+  <!-- 1) EXTERNAL CSS (recommended for real projects)
+       This matches the slide: <link rel="stylesheet" href="styles/main.css">
+       External styles are applied first. :contentReference[oaicite:4]{index=4} -->
+  <link rel="stylesheet" href="main.css" />
+
+  <!-- 2) EMBEDDED CSS (in the <head>)
+       These rules are applied AFTER external rules, so they can override them
+       when specificity is the same. :contentReference[oaicite:5]{index=5} -->
+  <style>
+    /* Example: tweak the page background using an embedded rule */
+    body {
+      /* rgba() is a CSS3 way to do color + transparency :contentReference[oaicite:6]{index=6} */
+      background: rgba(255, 255, 204, 0.75);
+    }
+
+    /* Example: multiple selectors (comma-separated) :contentReference[oaicite:7]{index=7} */
+    h1, h2, h3 {
+      /* If main.css sets colors, this may override it if specificity matches */
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="top">
+    <!-- 3) INLINE CSS (style="")
+         Inline styles are applied LAST and usually override external/embedded.
+         This matches the slide’s “External, Embedded, then Inline”. :contentReference[oaicite:8]{index=8} -->
+    <h1 style="font-size: 230%; color: #00F;">
+      San Joaquin Valley Town Hall
+    </h1>
+    <p class="tagline">A tiny site to practice CSS selectors + properties.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>This Season’s Speakers</h2>
+
+      <!-- class selector demo: ul.speakers {...} :contentReference[oaicite:9]{index=9} -->
+      <ul class="speakers">
+        <li>January: <a href="speakers/brancaccio.html">David Brancaccio</a></li>
+        <li>February: <a href="speakers/fitzpatrick.html">Robert Fitzpatrick</a></li>
+        <li>March: <a href="speakers/williams.html">Juan Williams</a></li>
+      </ul>
+
+      <p>
+        Extend the excitement by going to the luncheon.
+      </p>
+      <p>
+        A limited number of tickets are available.
+      </p>
+      <p>
+        <em>Contact us by phone</em> at (559) 555-1212.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Quick Form (Attribute Selector Demo)</h2>
+      <form action="#" method="post">
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" placeholder="name@school.edu" />
+
+        <!-- Attribute selector demo: input[type="submit"] {...} :contentReference[oaicite:10]{index=10} -->
+        <input type="submit" value="Join Newsletter" />
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Town Hall Demo. <a href="#top">Back to top</a></p>
+  </footer>
+</body>
+</html>
