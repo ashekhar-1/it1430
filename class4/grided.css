@@ -1,0 +1,58 @@
+/* ======================================
+   CSS Starter File
+====================================== */
+
+
+/* =========================
+   TODO 1: Style body
+   - Add background color
+   - Change font
+========================= */
+
+body {
+
+}
+
+
+/* =========================
+   TODO 2: Create gallery grid
+   Use:
+   display: grid
+   grid-template-columns
+   gap
+========================= */
+
+.gallery {
+
+}
+
+
+/* =========================
+   TODO 3: Style images
+   - width 100%
+   - fixed height
+   - object-fit: cover
+========================= */
+
+.gallery img {
+
+}
+
+
+/* =========================
+   TODO 4: Hover effect
+   Make images slightly zoom
+========================= */
+
+.gallery img:hover {
+
+}
+
+
+/* =========================
+   TODO 5: Optional styling
+   Add:
+   - padding
+   - margins
+   - borders
+========================= */
