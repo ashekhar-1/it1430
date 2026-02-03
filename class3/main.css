@@ -38,6 +38,7 @@ body {
 /* ID selector: targets the element with id="top" */
 #top {
   /* Example from PPT: border-bottom + padding using em : */
+  padding-top: 1em;
   padding-bottom: 0.75em;
   border-bottom: 3px solid #000;
 }
@@ -61,10 +62,10 @@ h2, h3 {
 
 /* A simple “card” look for sections */
 .card {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(255, 25, 255, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.15);
   padding: 1em;
-  margin-top: 1.25em;
+  margin-top: 2em;
   border-radius: 10px;
 }
 
@@ -98,7 +99,7 @@ a:visited {
   color: #2a7a2a;
 }
 a:hover, a:focus {
-  color: fuchsia;
+  color: blue;
   text-decoration: underline;
 }
 
@@ -125,7 +126,7 @@ h2 ~ p {
 
 input[type="submit"] {
   border: 1px solid black;
-  color: #ef9c00;
+  color: #0004ef;
   background-color: #facd8a;
   padding: 0.5em 0.9em;
   cursor: pointer;
@@ -134,7 +135,7 @@ input[type="submit"] {
 /* FONT shorthand demo (style weight size/line-height family) : */
 footer p {
   font: italic 80%/140% "Times New Roman", Times, serif;
-  text-align: right; /* alignment example : */
+  text-align: left; /* alignment example : */
   margin-top: 2em;
 }
 

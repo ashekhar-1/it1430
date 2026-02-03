@@ -3,25 +3,22 @@
 <head>
   <title>Town Hall CSS Demo</title>
 
-  <!-- 1) EXTERNAL CSS (recommended for real projects)
-       This matches the slide: <link rel="stylesheet" href="main.css">
-       External styles are applied first. : -->
+
   <link rel="stylesheet" href="main.css" />
 
-  <!-- 2) EMBEDDED CSS (in the <head>)
-       These rules are applied AFTER external rules, so they can override them
-       when specificity is the same. : -->
+
   <style>
     /* Example: tweak the page background using an embedded rule */
     body {
       /* rgba() is a CSS3 way to do color + transparency : */
-      background: rgba(255, 255, 204, 0.75);
+      /* background: rgba(0, 150, 173, 1); */
     }
 
     /* Example: multiple selectors (comma-separated) : */
     h1, h2, h3 {
       /* If main.css sets colors, this may override it if specificity matches */
       letter-spacing: 0.5px;
+      color: rgb(245, 40, 184);
     }
   </style>
 </head>
@@ -31,7 +28,7 @@
     <!-- 3) INLINE CSS (style="")
          Inline styles are applied LAST and usually override external/embedded.
          This matches the slide’s “External, Embedded, then Inline”. : -->
-    <h1 style="font-size: 230%; color: #00F;">
+    <h1 style="font-size: 230%;">
       San Joaquin Valley Town Hall
     </h1>
     <p class="tagline">A tiny site to practice CSS selectors + properties.</p>
