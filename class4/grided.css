@@ -10,11 +10,15 @@
 ========================= */
 
 body {
+<<<<<<< HEAD
     background-image: url("https://images.unsplash.com/photo-1768813282031-2aec62eee8b7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     min-height: 100vh;
+=======
+
+>>>>>>> 013929b669b529a9a887bc92fc813deb00e06e02
 }
 
 
@@ -59,4 +63,8 @@ body {
    - padding
    - margins
    - borders
+<<<<<<< HEAD
 ========================= */
+=======
+========================= */
+>>>>>>> 013929b669b529a9a887bc92fc813deb00e06e02
