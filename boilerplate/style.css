@@ -1,0 +1,38 @@
+/* ==========================================
+   CSS Boilerplate
+========================================== */
+
+
+/* Reset small spacing issues */
+body {
+    margin: 0;
+    padding: 0;
+
+    /* Good default font */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Light background for learning */
+    background-color: #f5f5f5;
+}
+
+
+/* Utility class examples students can reuse */
+.section {
+    padding: 40px 0;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* ==========================================
+   ADD YOUR CUSTOM STYLES BELOW
+========================================== */
+
+
+/* Example:
+.gallery {
+    display: grid;
+}
+*/
