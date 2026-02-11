@@ -25,10 +25,7 @@ body {
    grid-template-columns
    gap
 ========================= */
-
-.gallery {
-
-}
+.gallery {}
 
 
 /* =========================
@@ -38,9 +35,7 @@ body {
    - object-fit: cover
 ========================= */
 
-.gallery img {
-
-}
+.gallery img {}
 
 
 /* =========================
@@ -48,9 +43,7 @@ body {
    Make images slightly zoom
 ========================= */
 
-.gallery img:hover {
-
-}
+.gallery img:hover {}
 
 
 /* =========================
@@ -59,4 +52,8 @@ body {
    - padding
    - margins
    - borders
+<<<<<<< HEAD
 ========================= */
+=======
+========================= */
+>>>>>>> 9aff504 (10 Feb)
