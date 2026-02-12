@@ -43,10 +43,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
-
-
     <!-- TODO 3:
         Link your custom CSS file (grided.css)
     -->
@@ -125,7 +121,26 @@
         - Heading: Welcome to Gallery
         - Small description
     -->
+    <header class="jumbotron jumbotron-fluid text-center bg-transparent">
+        <div class="container">
+            <h1 class="display-4 a">Welcome to the Gallery!</h1>
+            <p class="lead a">Get all pictures here</p>
+            <hr class="my-4">
+            <p class="a">Search by category.</p>
 
+            <form class="form-inline justify-content-center" action="#" method="GET">
+                <label class="sr-only" for="searchInput">Search</label>
+                <input 
+                    id="searchInput"
+                    class="form-control mr-2"
+                    type="search"
+                    name="q"
+                    placeholder="Search (e.g. nature, city, ocean)"
+                />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </header>
 
 
     <!-- ========================= -->
