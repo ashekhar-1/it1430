@@ -53,3 +53,8 @@ body {
    - margins
    - borders
 ========================= */
+
+.size-img {
+   width: 600px;
+   height: auto;
+}

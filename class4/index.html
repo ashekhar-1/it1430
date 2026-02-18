@@ -130,13 +130,8 @@
 
             <form class="form-inline justify-content-center" action="#" method="GET">
                 <label class="sr-only" for="searchInput">Search</label>
-                <input 
-                    id="searchInput"
-                    class="form-control mr-2"
-                    type="search"
-                    name="q"
-                    placeholder="Search (e.g. nature, city, ocean)"
-                />
+                <input id="searchInput" class="form-control mr-2" type="search" name="q"
+                    placeholder="Search (e.g. nature, city, ocean)" />
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
@@ -157,14 +152,89 @@
         Inside it add 6–9 <img> tags
     -->
 
-    <div class="gallery">
+    <main class="container">
+        <section class="gallery-grid">
+            <figure class="gallery-item" data-category="nature">
+                <img class="size-img"
+                    src="https://images.unsplash.com/photo-1603477849227-705c424d1d80?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJvcGljYWwlMjBiZWFjaHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Tropical beach with blue ocean"  loading="lazy" />
+                <figcaption>Nature: Tropical Beach</figcaption>
+            </figure>
 
-        <!-- TODO 6:
-            Add multiple images like:
-            <img src="https://picsum.photos/300?1">
-        -->
+            <figure class="gallery-item" data-category="nature">
+                <img class="size-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnRhaW5zfGVufDB8fDB8fHww"
+                    alt="Icy Mountains" loading="lazy" />
+                <figcaption>Nature: Mountains</figcaption>
+            </figure>
 
-    </div>
+            <figure class="gallery-item" data-category="animal">
+                <img class="size-img" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
+                    alt="House Cat" loading="lazy" />
+                <figcaption>Animal: House Cat</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="city">
+                <img class="size-img" src="https://images.unsplash.com/photo-1575917649705-5b59aaa12e6b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXRsYW50YXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Atlanta in the evening" loading="lazy" />
+                <figcaption>City: Atlanta</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="animal">
+                <img class="size-img" src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hlZXRhaHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Cheetah in the Wild" loading="lazy" />
+                <figcaption>Animal: Cheetah</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="animal">
+                <img class="size-img" src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGlvbnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Wild Lion" loading="lazy" />
+                <figcaption>Animal: Lion</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="city">
+                <img class="size-img" src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmV3JTIweW9ya3xlbnwwfHwwfHx8MA%3D%3D"
+                    alt="New York City" loading="lazy" />
+                <figcaption>City: New York</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="city">
+                <img class="size-img" src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FsaWZvcm5pYXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Golden Gate" loading="lazy" />
+                <figcaption>City: San Francisco</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="nature">
+                <img class="size-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJvcGljYWwlMjBiZWFjaHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Tropical beach with blue ocean" loading="lazy" />
+                <figcaption>Nature: Tropical Beach</figcaption>
+            </figure>
+
+
+            <figure class="gallery-item" data-category="nature">
+                <img class="size-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJvcGljYWwlMjBiZWFjaHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Tropical beach with blue ocean" loading="lazy" />
+                <figcaption>Nature: Tropical Beach</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="nature">
+                <img class="size-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJvcGljYWwlMjBiZWFjaHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Tropical beach with blue ocean" loading="lazy" />
+                <figcaption>Nature: Tropical Beach</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="nature">
+                <img class="size-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJvcGljYWwlMjBiZWFjaHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Tropical beach with blue ocean" loading="lazy" />
+                <figcaption>Nature: Tropical Beach</figcaption>
+            </figure>
+        </section>
+
+        <section class="mt-5 p-4 glass-panel">
+            <h2 class="a mb-3"> Free Subscription</h2>
+
+            <h3 class="a mt-4">Add your donation</h3>
+        </section>
+    </main>
 
 
 
