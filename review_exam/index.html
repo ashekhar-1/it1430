@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Review Website</title>
+</head>
+
+<body>
+    <h1>My Story</h1>
+    <nav>
+        <!-- <a> used for creating the hyperlink -->
+        <a href="/pages/education.html">Education</a> |
+        <a href="/pages/Social.html" target="_blank">Social</a> |
+        <a href="/pages/contact.html">contact</a> |
+        <a href="/pages/Projects.html">Projects</a>
+    </nav>
+
+
+    <h2>Heading 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloremque eaque qui nesciunt quas iusto
+        laboriosam corrupti nemo vel, assumenda asperiores sapiente debitis illum hic quod, dolores quia iure fugit.</p>
+
+    <h3>Heading 3</h3>
+    <p>We have books on a variety of languages, including</p>
+    <ul>
+        <li>JavaScript</li>
+        <li>PHP and MySQL</li>
+        <li>Servlets and JSP</li>
+        <li>ASP.NET</li>
+    </ul>
+     
+    <p>You will need to complete the following steps:</p>
+    <ol>
+        <li>Enter your billing information.</li>
+        <li>Enter your shipping information.</li>
+        <li>Confirm your order.</li>
+    </ol>
+
+
+    <p>
+        <b>This Text is BOLD</b>
+    </p>
+
+    <p>
+        <i>This text is ITALIC</i>
+    </p>
+
+    <p>
+        <strong>
+            This is IMPORTANT!!
+        </strong>
+    </p>
+    <h4>Heading 4</h4>
+    <img src="/images/cat.png" alt="Cat">
+
+    <h5>Tables</h5>
+    <!--
+        <table> is used to display data in rows and columns.
+        border="1" adds a visible border (simple beginner styling).
+    -->
+    <table border="1">
+        <!--
+            <tr> means "table row"
+            This is the HEADER row of the table.
+        -->
+        <tr>
+            <!-- <th> means "table heading" (bold + centered by default) -->
+            <th>First Row, First Column</th>
+            <th>First Row, Second Column</th>
+            <th>First Row, Third Column</th>
+        </tr>
+
+        <tr>
+            <th>Second Row, First Column</th>
+            <th>Second Row, Second Column</th>
+            <th>Second Row, Third Column</th>
+        </tr>
+
+        <tr>
+            <th>Third Row, First Column</th>
+            <th>Third Row, Second Column</th>
+            <th>Third Row, Third Column</th>
+        </tr>
+
+        <tr>
+            <th>Fourth Row, First Column</th>
+            <th>Fourth Row, Second Column</th>
+            <th>Fourth Row, Third Column</th>
+        </tr>
+    </table>
+
+    <h5>Forms</h5>
+    <h6>What's my favorite sport?</h6>
+
+    <!-- 
+        FORM SECTION
+        action="/submit_form" means:
+        - Data will be sent to a backend endpoint called /submit_form
+        - This requires a real server (PHP, Node, etc.)
+    -->
+    <form action="/submit_form" method="post">
+
+        <!-- 
+            Each sport is wrapped inside a <div> for structure.
+            Checkboxes allow MULTIPLE selections.
+        -->
+        <div>
+            <label>
+                <!-- 
+                    name="sport" groups all sport choices
+                    value="soccer" is what the server receives
+                -->
+                <input type="checkbox">Soccer
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="checkbox" name="sport" value="tennis">
+                Tennis
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="checkbox" name="sport" value="Basketball">
+                Basketball
+            </label>
+        </div>
+
+        <!-- 
+            Newsletter checkbox
+            checked = selected by default when page loads
+        -->
+        <div>
+            <label>
+                <input type="checkbox" name="subscribe" value="yes" checked>
+                Subscribe to our newsletter
+            </label>
+        </div>
+
+        <!-- Submit button sends the form data -->
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+</body>
+
+</html>
