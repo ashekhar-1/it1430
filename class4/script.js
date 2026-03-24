@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
             /** 
              * data-category= animal, city, nature defined in index.html
              *      animal = ["cat", "cheetah", "lion"]
-             *      city = ["New York", "San Francisco"]
+             *      city = ["New York", "San Francisco", "Atlanta"]
              *      nature = ["Mountains", "Beach"]
             */
            // Get the category stored in the data attribute
@@ -36,6 +36,11 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     // 3. Event Listener: Run filter whenevr the user types (Real time search)
+    searchInput_.addEventListener('input', filterImages);
 
     // 4. Event Listener: Hnadle the "Search" button / Enter key
+    searchForm_.addEventListener('submit', function(event){
+        event.preventDefault(); //STOP the page from reloading
+        filterImages(); // Run the filter one last time just in case
+    })
 })
