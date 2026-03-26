@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .array-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .element {
+            background: #e0f7fa;
+            padding: 10px 20px;
+            border: 2px solid #006064;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .log {
+            background: #fcb103;
+            padding: 10px;
+            margin-top: 20px;
+            border-left: 5px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Javascript Array Methods</h1>
+    <h3>Current 'RSVP for Happy Hour': </h3>
+
+    <div id="visualArray" class="array-container"></div>
+    <div id="outputString"></div>
+
+    <hr>
+    <!-- var friends = ["Andy", "John", "Joseph", "Amy", "David"] -->
+    
+    <!-- friends.push("Cathy") -->
+    <button onclick="demoPush()">Push (Add to End)</button>   
+    <!-- ["Andy", "John", "Joseph", "Amy", "David", "Cathy"]  -->
+
+    <!-- friends.pop() -->
+    <button onclick="demoPop()">Pop (Remove Last)</button>
+    <!-- ["Andy", "John", "Joseph", "Amy", "David"] -->
+
+    <!-- friends.unshift("Alex") -->
+    <button onclick="demoUnshift()">Unshift (Add to Start)</button>
+    <!-- ["Alex", "Andy", "John", "Joseph", "Amy", "David"] -->
+
+    <!-- friends.shift() -->
+    <button onclick="demoShift()">Shift (Remove First)</button>
+    <!-- ["Andy", "John", "Joseph", "Amy", "David"] -->
+
+    <!--  -->
+    <!-- <button onclick="demoSplice()">Splice (Insert at 3)</button> -->
+
+    <!-- friends.sort() -->
+    <button onclick="demoSort()">Sort (A-Z)</button>
+    <!-- ["Amy", "Andy", "David", "John", "Joseph"] -->
+
+    <!-- friends.reverse() -->
+    <button onclick="demoReverse()">Reverse (Z-A)</button>
+    <!-- ["Joseph", "John", "David", "Andy", "Amy"] -->
+
+    <div class="log" id="actionLog">Action Log: Lets Go!!!</div>
+
+    <script>
+        var friends_for_happy_hour = ["Andy", "John", "Joseph", "Amy", "David"]
+        // Human:               Person  1       2       3          4    5
+        // Computers:                   0       1       2          3    4
+    </script>
+
+
+</body>
