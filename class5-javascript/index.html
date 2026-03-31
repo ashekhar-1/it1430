@@ -77,9 +77,59 @@
     <div class="log" id="actionLog">Action Log: Lets Go!!!</div>
 
     <script>
-        var friends_for_happy_hour = ["Andy", "John", "Joseph", "Amy", "David"]
+        var friends_for_happy_hour = ["Andy", "John", "Joseph", "Amy", "David", "Tom", "Jerry"];
         // Human:               Person  1       2       3          4    5
         // Computers:                   0       1       2          3    4
+        
+        function updateDisplayToday(action){
+            const container = document.getElementById('visualArray');
+            container.innerHTML = '';
+
+            // This loops through our friends_for_happy_hour array.
+            /*
+                1. For every person in the list, it runs the code inside curly brackets.
+                2. It gives us the friends_for_happy_hour's name (friends) and their position 
+                    in the list (index).
+            */
+            friends_for_happy_hour.forEach((friends, index) => {
+            
+                /* This creates a brand new, empty <div> element in our computer's memory.
+                    It is not visible on our screen.
+                */
+                let div_today = document.createElement('div');
+
+                // This assigns the CSS class "element" to the new div, 
+                // so that we can style it later.
+                // <div class="element"></div>
+                div_today.className = 'element';
+
+                // This fills our div with the text.
+                // If the first friend is Andy, then it will set the text to "0: Andy"
+                div_today.innerText = '${index}: ${friends}';
+
+                // This is our final touch. 
+                // 1. It will take that new div
+                // 2. It will stick inside an existing element on our page (the container)
+                // 3. This is that moment when the friend's name actually appears on our screen.
+                // Refer to: https://www.youtube.com/watch?v=e0ihEHxd6vI
+                container.appendChild(div_today);
+            });
+
+        }
+        updateDisplayToday("Page Loaded")
+
+        function demoPush(){}
+
+        function demoPop(){}
+
+        function demoUnshift(){}
+
+        function demoShift(){}
+
+        function demoSort(){}
+
+        function demoReverse(){}
+        
     </script>
 
 
