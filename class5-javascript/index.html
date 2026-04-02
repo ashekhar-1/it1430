@@ -81,7 +81,7 @@
         // Human:               Person  1       2       3          4    5
         // Computers:                   0       1       2          3    4
         
-        function updateDisplayToday(action){
+        function updateDisplayToday(action_for_happy_hour){
             const container = document.getElementById('visualArray');
             container.innerHTML = '';
 
@@ -105,7 +105,7 @@
 
                 // This fills our div with the text.
                 // If the first friend is Andy, then it will set the text to "0: Andy"
-                div_today.innerText = '${index}: ${friends}';
+                div_today.innerText = `${index}: ${friends}`;
 
                 // This is our final touch. 
                 // 1. It will take that new div
@@ -113,24 +113,59 @@
                 // 3. This is that moment when the friend's name actually appears on our screen.
                 // Refer to: https://www.youtube.com/watch?v=e0ihEHxd6vI
                 container.appendChild(div_today);
+                
+                document.getElementById('outputString').innerText = `Friends Coming for Happy Hour: ["${friends_for_happy_hour.join('", "')}"]`;
+
+                document.getElementById('actionLog').innerText = `Action: ${action_for_happy_hour}`;
+
+                document.getElementById('actionLog').innerText = document.getElementById('actionLog').innerText + `, Array Length: ${friends_for_happy_hour.length}`;
+
             });
 
         }
-        updateDisplayToday("Page Loaded")
+        updateDisplayToday("Page Loaded");
 
-        function demoPush(){}
+        function demoPush(){
+            friends_for_happy_hour.push("Jack");
+            updateDisplayToday("push('Jack')");
+        }
 
-        function demoPop(){}
+        function demoPop(){
+            // ["Andy", "John", "Joseph", "Amy", "David", "Tom", "Jerry"];
+            friend_not_coming = friends_for_happy_hour.pop();
+            updateDisplayToday(`pop() -> Removed ${friend_not_coming}`);
+            // 1. friend_not_coming will first store "Jerry" who is getting removed from our list
+            // 1. It will show: pop() -> Removed Jerry
 
-        function demoUnshift(){}
+            // 2. Our list will get updated: ["Andy", "John", "Joseph", "Amy", "David", "Tom"];
+            // If we click the pop() button again, then 
+                // a. friend_not_coming will be updated
+                // b. friend_not_coming will store "Tom" (which is the last element)
+            // 2. It will show: pop() -> Removed Tom
+        }
 
-        function demoShift(){}
+        function demoUnshift(){
+            friends_for_happy_hour.unshift("James");
+            updateDisplayToday("unshift('James')");
+        }
 
-        function demoSort(){}
+        function demoShift(){
+            friend_not_coming_priority = friends_for_happy_hour.shift();
+            updateDisplayToday(`shift() -> Removed ${friend_not_coming_priority}`);
+        }
 
-        function demoReverse(){}
+        function demoSort(){
+            friends_for_happy_hour.sort();
+            updateDisplayToday("sort()");
+        }
+
+        function demoReverse(){
+            friends_for_happy_hour.reverse();
+            updateDisplayToday("reverse()");
+        }
         
     </script>
 
 
 </body>
+</html>
