@@ -41,25 +41,18 @@
             margin: 10px 0;
             padding: 15px;
             border-radius: 6px;
+            display: flex;
+            justify-content: space-between; /* 🔥 keeps right alignment */
+            align-items: center;
         }
 
-        .lab-buttons {
-            margin-top: 10px;
-        }
-
-        .lab-buttons button {
-            margin: 5px 5px 0 0;
-        }
-
-        a {
+        .lab-list a {
             text-decoration: none;
         }
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            color: #555;
+        .button-group {
+            display: flex;
+            gap: 5px;
         }
 
         button {
@@ -82,125 +75,124 @@
             border-radius: 6px;
             margin-top: 15px;
         }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            color: #555;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>IT1430 – Introduction to Web Development</h1>
-        <p>HTML • CSS • JavaScript • Hands-on Labs</p>
-    </header>
+<header>
+    <h1>IT1430 – Introduction to Web Development</h1>
+    <p>HTML • CSS • JavaScript • Hands-on Labs</p>
+</header>
 
-    <main>
+<main>
 
-        <h2>Lab Index</h2>
-        <p>
-            Welcome! This page contains all the lab work and class examples
-            we will build together during the semester.
-        </p>
+    <h2>Lab Index</h2>
 
-        <ul class="lab-list">
+    <ul class="lab-list">
 
-            <li>
-                Jan 15, 2026 — Getting Started with HTML
-                <a href="/it1430/class0/index.html">
-                    <button>Open</button>
-                </a>
-            </li>
+        <li>
+            <span>Jan 15, 2026 — Getting Started with HTML</span>
+            <a href="/it1430/class0/index.html">
+                <button>Open</button>
+            </a>
+        </li>
 
-            <li>
-                Jan 20, 2026 — HTML Basics
-                <a href="/it1430/class1/class1.html">
-                    <button>Open</button>
-                </a>
-            </li>
+        <li>
+            <span>Jan 20, 2026 — HTML Basics</span>
+            <a href="/it1430/class1/class1.html">
+                <button>Open</button>
+            </a>
+        </li>
 
-            <li>
-                Jan 22, 2026 — Advanced HTML
-                <a href="/it1430/class2/class2.html">
-                    <button>Open</button>
-                </a>
-            </li>
+        <li>
+            <span>Jan 22, 2026 — Advanced HTML</span>
+            <a href="/it1430/class2/class2.html">
+                <button>Open</button>
+            </a>
+        </li>
 
-            <li>
-                Jan 27 & 29 — CSS Introduction
-                <a href="/it1430/class3/index.html">
-                    <button>Open</button>
-                </a>
-            </li>
+        <li>
+            <span>Jan 27 & 29 — CSS Introduction</span>
+            <a href="/it1430/class3/index.html">
+                <button>Open</button>
+            </a>
+        </li>
 
-            <li>
-                Feb 3 — CSS Gallery Project
-                <a href="/it1430/class4/index.html">
-                    <button>Open</button>
-                </a>
-            </li>
+        <li>
+            <span>Feb 3 — CSS Gallery Project</span>
+            <a href="/it1430/class4/index.html">
+                <button>Open</button>
+            </a>
+        </li>
 
-            <li>
-                Feb 26 — HTML Revision
-                <a href="/it1430/review_exam/index.html">
-                    <button>Open</button>
-                </a>
-            </li>
+        <li>
+            <span>Feb 26 — HTML Revision</span>
+            <a href="/it1430/review_exam/index.html">
+                <button>Open</button>
+            </a>
+        </li>
 
-            <li>
-                Mar 26 — JavaScript Project
-                <a href="/it1430/class5-javascript/index.html">
-                    <button>Open</button>
-                </a>
-            </li>
+        <li>
+            <span>Mar 26 — JavaScript Project</span>
+            <a href="/it1430/class5-javascript/index.html">
+                <button>Open</button>
+            </a>
+        </li>
 
-            <!-- UPDATED CSS REVISION SECTION -->
-            <li>
-                <strong>CSS Revision (LN04–LN10)</strong>
+        <!-- CSS REVISION -->
+        <li>
+            <span>CSS Revision (LN04–LN10)</span>
 
-                <div class="lab-buttons">
-                    <button onclick="loadLecture('ln04.html')">LN04</button>
-                    <button onclick="loadLecture('ln05.html')">LN05</button>
-                    <button onclick="loadLecture('ln06.html')">LN06</button>
-                    <button onclick="loadLecture('ln07.html')">LN07</button>
-                    <button onclick="loadLecture('ln08.html')">LN08</button>
-                    <button onclick="loadLecture('ln09.html')">LN09</button>
-                    <button onclick="loadLecture('ln10.html')">LN10</button>
-                </div>
-            </li>
+            <div class="button-group">
+                <button onclick="loadLecture('ln04.html')">LN04</button>
+                <button onclick="loadLecture('ln05.html')">LN05</button>
+                <button onclick="loadLecture('ln06.html')">LN06</button>
+                <button onclick="loadLecture('ln07.html')">LN07</button>
+                <button onclick="loadLecture('ln08.html')">LN08</button>
+                <button onclick="loadLecture('ln09.html')">LN09</button>
+                <button onclick="loadLecture('ln10.html')">LN10</button>
+            </div>
+        </li>
 
-        </ul>
+    </ul>
 
-        <hr>
+    <hr>
 
-        <!-- LECTURE VIEWER -->
-        <h2>Lecture Viewer</h2>
-        <p>Click any LN04–LN10 button above to load the lecture here.</p>
+    <!-- <!-- VIEWER -->
+    <h2>Lecture Viewer</h2>
+    <iframe id="lectureFrame" src="/it1430/review_exam_2/ln04.html"></iframe> -->
 
-        <iframe id="lectureFrame" src="/it1430/review_exam_2/ln04.html"></iframe>
+    <hr>
 
-        <hr>
+    <h2>Quick Interaction</h2>
+    <button onclick="showMessage()">Click Me</button>
+    <p id="message"></p>
 
-        <!-- JS Demo -->
-        <h2>Quick Interaction</h2>
-        <button onclick="showMessage()">Click Me</button>
-        <p id="message"></p>
+</main>
 
-    </main>
+<footer>
+    © 2026 IT1430 • Web Development Labs
+</footer>
 
-    <footer>
-        © 2026 IT1430 • Web Development Labs
-    </footer>
+<script>
+    function showMessage() {
+        document.getElementById("message").innerText =
+            "JavaScript is working! This page is interactive.";
+    }
 
-    <script>
-        function showMessage() {
-            document.getElementById("message").innerText =
-                "JavaScript is working! This page is interactive.";
-        }
-
-        function loadLecture(fileName) {
-            document.getElementById("lectureFrame").src =
-                "/it1430/review_exam_2/" + fileName;
-        }
-    </script>
+    function loadLecture(fileName) {
+        document.getElementById("lectureFrame").src =
+            "/it1430/review_exam_2/" + fileName;
+    }
+</script>
 
 </body>
 </html>
