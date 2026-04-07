@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Styling Interactive Revision</title>
+
+<style>
+/* GLOBAL STYLES */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2em;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+section {
+    background: white;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Slide 6-7: Colors */
+.color-box {
+    padding: 1em;
+    margin-top: 10px;
+}
+
+/* Slide 10-11: Selectors */
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+/* Slide 16: Pseudo-classes */
+a:hover {
+    color: fuchsia;
+}
+
+/* Slide 17-18: Fonts */
+.font-demo {
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Slide 19: Text formatting */
+.text-demo {
+    text-indent: 2em;
+    text-align: justify;
+}
+
+/* Slide 20: Text shadow */
+.shadow-demo {
+    font-size: 2em;
+    color: blue;
+    text-shadow: 2px 2px 5px red;
+}
+
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>CSS Styling Interactive Revision</h1>
+<p><strong>Reference:</strong> Lecture Note 4 - CSS Styling (Chapter 4)</p>
+
+<!-- Slide 2 -->
+<section>
+<h2>1. Ways to Insert CSS</h2>
+<p><em>Reference: Slide 2</em></p>
+
+<ul>
+    <li><b>External CSS</b> → Linked stylesheet</li>
+    <li><b>Embedded CSS</b> → Inside &lt;style&gt;</li>
+    <li><b>Inline CSS</b> → Inside HTML element</li>
+</ul>
+
+<p style="color:red;">Inline CSS example</p>
+</section>
+
+<!-- Slide 3-4 -->
+<section>
+<h2>2. Units of Measurement</h2>
+<p><em>Reference: Slides 3–4</em></p>
+
+<p>Common units: %, em, px</p>
+
+<p style="font-size: 100%;">100% font size</p>
+<p style="font-size: 150%;">150% font size</p>
+<p style="font-size: 2em;">2em font size</p>
+</section>
+
+<!-- Slide 6-8 -->
+<section>
+<h2>3. Colors in CSS</h2>
+<p><em>Reference: Slides 6–8</em></p>
+
+<button onclick="changeColor()">Change Background Color</button>
+
+<div id="colorBox" class="color-box">
+    This box demonstrates color changes
+</div>
+
+<ul>
+    <li>Named: red</li>
+    <li>RGB: rgb(255, 102, 51)</li>
+    <li>HEX: #ff0000</li>
+</ul>
+</section>
+
+<!-- Slide 10-12 -->
+<section>
+<h2>4. CSS Selectors</h2>
+<p><em>Reference: Slides 10–12</em></p>
+
+<p class="highlight">Class selector example</p>
+<p id="idExample">ID selector example</p>
+
+<button onclick="toggleHighlight()">Toggle Class</button>
+</section>
+
+<!-- Slide 13-14 -->
+<section>
+<h2>5. Relational Selectors</h2>
+<p><em>Reference: Slides 13–14</em></p>
+
+<ul>
+    <li>Descendant selector</li>
+    <li>Child selector</li>
+    <li>Sibling selector</li>
+</ul>
+
+<div>
+    <p>Parent paragraph</p>
+    <span><p>Child paragraph</p></span>
+</div>
+</section>
+
+<!-- Slide 15 -->
+<section>
+<h2>6. Attribute Selectors</h2>
+<p><em>Reference: Slide 15</em></p>
+
+<a href="#">Example link with href</a><br>
+<input type="submit" value="Submit Button">
+</section>
+
+<!-- Slide 16 -->
+<section>
+<h2>7. Pseudo-classes and Pseudo-elements</h2>
+<p><em>Reference: Slide 16</em></p>
+
+<a href="#">Hover over this link</a>
+
+<p>
+<span style="font-size:150%; font-weight:bold;">F</span>
+irst letter styled example
+</p>
+</section>
+
+<!-- Slide 17-18 -->
+<section>
+<h2>8. Fonts</h2>
+<p><em>Reference: Slides 17–18</em></p>
+
+<p class="font-demo">Font styling example (italic + bold)</p>
+
+<ul>
+    <li>font-family</li>
+    <li>font-size</li>
+    <li>font-weight</li>
+</ul>
+</section>
+
+<!-- Slide 19 -->
+<section>
+<h2>9. Text Formatting</h2>
+<p><em>Reference: Slide 19</em></p>
+
+<p class="text-demo">
+    This paragraph demonstrates indentation and alignment.
+</p>
+</section>
+
+<!-- Slide 20 -->
+<section>
+<h2>10. Text Shadow</h2>
+<p><em>Reference: Slide 20</em></p>
+
+<p class="shadow-demo">Shadow Effect Example</p>
+</section>
+
+<script>
+// Slide 6-7: Color interaction
+function changeColor() {
+    const box = document.getElementById("colorBox");
+    box.style.backgroundColor = "#FFC";
+}
+
+// Slide 10-11: Selector interaction
+function toggleHighlight() {
+    const el = document.getElementById("idExample");
+    el.classList.toggle("highlight");
+}
+</script>
+
+</body>
+</html>
