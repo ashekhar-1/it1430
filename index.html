@@ -41,19 +41,18 @@
             margin: 10px 0;
             padding: 15px;
             border-radius: 6px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
-        .lab-list a {
+        .lab-buttons {
+            margin-top: 10px;
+        }
+
+        .lab-buttons button {
+            margin: 5px 5px 0 0;
+        }
+
+        a {
             text-decoration: none;
-            color: #003057;
-            font-weight: bold;
-        }
-
-        .lab-list a:hover {
-            text-decoration: underline;
         }
 
         footer {
@@ -75,18 +74,25 @@
         button:hover {
             background-color: #00509e;
         }
+
+        iframe {
+            width: 100%;
+            height: 650px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Page Header -->
+    <!-- Header -->
     <header>
         <h1>IT1430 – Introduction to Web Development</h1>
         <p>HTML • CSS • JavaScript • Hands-on Labs</p>
     </header>
 
-    <!-- Main Content -->
     <main>
 
         <h2>Lab Index</h2>
@@ -95,103 +101,106 @@
             we will build together during the semester.
         </p>
 
-        <!-- Lab Links -->
         <ul class="lab-list">
 
             <li>
-                <span>Jan 15, 2026 — Getting Started with HTML</span>
+                Jan 15, 2026 — Getting Started with HTML
                 <a href="/it1430/class0/index.html">
                     <button>Open</button>
                 </a>
             </li>
 
             <li>
-                <span>Jan 20, 2026 — HTML Basics (Forms, Inputs)</span>
+                Jan 20, 2026 — HTML Basics
                 <a href="/it1430/class1/class1.html">
                     <button>Open</button>
                 </a>
             </li>
 
             <li>
-                <span>Jan 22, 2026 — Advanced HTML (Forms + Structure)</span>
-                <!-- class2 is a folder, GitHub Pages will load index.html inside it -->
+                Jan 22, 2026 — Advanced HTML
                 <a href="/it1430/class2/class2.html">
                     <button>Open</button>
                 </a>
             </li>
 
             <li>
-                <span>Jan 27, 2026 and Jan 29, 2026 — Introduction to CSS</span>
-                <!-- class3 is a folder, GitHub Pages will load index.html inside it -->
+                Jan 27 & 29 — CSS Introduction
                 <a href="/it1430/class3/index.html">
                     <button>Open</button>
                 </a>
             </li>
 
             <li>
-                <span>Boilerplate (Default HTML + CSS)</span>
-                <a href="/it1430/boilerplate/index.html">
-                    <button>Open</button>
-                </a>
-            </li>
-            
-            <li>
-                <span>Feb 3, 2026 — CSS Project on Picture Gallery</span>
-                <!-- class4 is a folder, GitHub Pages will load index.html inside it -->
+                Feb 3 — CSS Gallery Project
                 <a href="/it1430/class4/index.html">
                     <button>Open</button>
                 </a>
             </li>
 
             <li>
-                <span>Feb 26, 2026 — HTML Revision (LN01, LN02, LN03)</span>
-                <!-- review_exam is a folder, GitHub Pages will load index.html inside it -->
+                Feb 26 — HTML Revision
                 <a href="/it1430/review_exam/index.html">
                     <button>Open</button>
                 </a>
             </li>
 
             <li>
-                <span>Mar 26, 2026 — JS Project on Happy Hour</span>
-                <!-- class5-javascript is a folder, GitHub Pages will load index.html inside it -->
+                Mar 26 — JavaScript Project
                 <a href="/it1430/class5-javascript/index.html">
                     <button>Open</button>
                 </a>
+            </li>
+
+            <!-- UPDATED CSS REVISION SECTION -->
+            <li>
+                <strong>CSS Revision (LN04–LN10)</strong>
+
+                <div class="lab-buttons">
+                    <button onclick="loadLecture('ln04.html')">LN04</button>
+                    <button onclick="loadLecture('ln05.html')">LN05</button>
+                    <button onclick="loadLecture('ln06.html')">LN06</button>
+                    <button onclick="loadLecture('ln07.html')">LN07</button>
+                    <button onclick="loadLecture('ln08.html')">LN08</button>
+                    <button onclick="loadLecture('ln09.html')">LN09</button>
+                    <button onclick="loadLecture('ln10.html')">LN10</button>
+                </div>
             </li>
 
         </ul>
 
         <hr>
 
-        <!-- Small interactive JS demo -->
-        <h2>Quick Interaction</h2>
-        <p>Click the button to see JavaScript in action:</p>
+        <!-- LECTURE VIEWER -->
+        <h2>Lecture Viewer</h2>
+        <p>Click any LN04–LN10 button above to load the lecture here.</p>
 
+        <iframe id="lectureFrame" src="/it1430/review_exam_2/ln04.html"></iframe>
+
+        <hr>
+
+        <!-- JS Demo -->
+        <h2>Quick Interaction</h2>
         <button onclick="showMessage()">Click Me</button>
         <p id="message"></p>
 
     </main>
 
-    <!-- Footer -->
     <footer>
         © 2026 IT1430 • Web Development Labs
     </footer>
 
-    <!-- 
-        Simple JavaScript
-        Demonstrates DOM manipulation
-    -->
     <script>
         function showMessage() {
             document.getElementById("message").innerText =
-                "🎉 JavaScript is working! This page is now interactive.";
+                "JavaScript is working! This page is interactive.";
+        }
+
+        function loadLecture(fileName) {
+            document.getElementById("lectureFrame").src =
+                "/it1430/review_exam_2/" + fileName;
         }
     </script>
 
 </body>
 </html>
-
-
-
-
-
