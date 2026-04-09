@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lecture 8 Revision - Images and Tables</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+nav button {
+    margin: 5px;
+    padding: 10px;
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sections */
+.section {
+    display: none;
+    padding: 20px;
+    background: white;
+    margin: 20px;
+}
+
+.active {
+    display: block;
+}
+
+/* Image styling */
+img.small {
+    height: 150px;
+    width: 200px;
+}
+
+/* Figure */
+figure {
+    float: left;
+    margin-right: 20px;
+}
+figcaption {
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+/* Rollover */
+#rollover {
+    width: 300px;
+    height: 200px;
+    background-image: url("https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+#rollover:hover {
+    background-image: url("https://images.unsplash.com/photo-1468413253725-0d5181091126?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+thead {
+    background-color: lightblue;
+}
+tbody tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+/* Thumbnail */
+.thumbnail img {
+    width: 100px;
+    cursor: pointer;
+}
+
+#preview {
+    width: 300px;
+    margin-top: 10px;
+}
+</style>
+
+<script>
+function showSection(id) {
+    let sections = document.querySelectorAll(".section");
+    sections.forEach(s => s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+
+function showImage(src) {
+    document.getElementById("preview").src = src;
+}
+</script>
+
+</head>
+
+<body>
+
+<nav>
+    <button onclick="showSection('images')">Images</button>
+    <button onclick="showSection('alignment')">Alignment</button>
+    <button onclick="showSection('figure')">Figure</button>
+    <button onclick="showSection('thumbnail')">Thumbnails</button>
+    <button onclick="showSection('rollover')">Rollover</button>
+    <button onclick="showSection('table')">Tables</button>
+</nav>
+
+<!-- Slide 3 & 4 -->
+<div id="images" class="section active">
+<h2>Slide 3-4: Working with Images</h2>
+
+<p><b>Types of Images:</b> JPG, PNG, GIF, BMP</p>
+
+<h3>Sizing Images</h3>
+
+<pre>
+&lt;img src="image.jpg" height="300" width="400"&gt;
+</pre>
+
+<p>Example:</p>
+
+<img src="https://images.unsplash.com/photo-1599551528722-6b6d968512a2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="large">
+<img class="small" src="https://plus.unsplash.com/premium_photo-1725408113207-3e20a0814eae?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="small">
+
+</div>
+
+<!-- Slide 5 -->
+<div id="alignment" class="section">
+<h2>Slide 5: Aligning Images</h2>
+
+<pre>
+img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+</pre>
+
+<p>
+<img src="https://plus.unsplash.com/premium_photo-1661277679965-9db1104e890f?q=80&w=1177&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+Web: example.com
+</p>
+
+</div>
+
+<!-- Slide 7 -->
+<div id="figure" class="section">
+<h2>Slide 7: Figure with Caption</h2>
+
+<figure>
+<img src="https://images.unsplash.com/photo-1614121169531-b424c5e9aab6?q=80&w=1045&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+<figcaption>NASA Space Shuttle</figcaption>
+</figure>
+
+<p>This demonstrates figure and caption usage.</p>
+
+</div>
+
+<!-- Slide 8 -->
+<div id="thumbnail" class="section">
+<h2>Slide 8: Image Thumbnails</h2>
+
+<div class="thumbnail">
+<img src="https://plus.unsplash.com/premium_photo-1661891622579-bee76e28c304?q=80&w=1181&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="showImage(this.src)">
+<img src="https://images.unsplash.com/photo-1594069758873-e79e9075eb7d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="showImage(this.src)">
+<img src="https://images.unsplash.com/photo-1557066911-9184d3f95959?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="showImage(this.src)">
+</div>
+
+<img id="preview" src="https://via.placeholder.com/300">
+
+</div>
+
+<!-- Slide 9 -->
+<div id="rollover" class="section">
+<h2>Slide 9: Image Rollover</h2>
+
+<div id="rollover"></div>
+
+<p>Hover over the box to change image.</p>
+
+</div>
+
+<!-- Slide 10-14 -->
+<div id="table" class="section">
+<h2>Slide 10-14: Tables</h2>
+
+<table>
+<thead>
+<tr>
+<th>Book</th>
+<th>Year</th>
+<th>Sales</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>PHP and MySQL</td>
+<td>2014</td>
+<td>$372,381</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>2016</td>
+<td>$500,000</td>
+</tr>
+</tbody>
+
+<tfoot>
+<tr>
+<th>Total</th>
+<td></td>
+<td>$872,381</td>
+</tr>
+</tfoot>
+</table>
+
+<h3>Merging Cells Example</h3>
+
+<table>
+<tr>
+<th rowspan="2">Book</th>
+<th colspan="2">Sales</th>
+</tr>
+<tr>
+<th>North</th>
+<th>South</th>
+</tr>
+<tr>
+<td>HTML</td>
+<td>$100</td>
+<td>$200</td>
+</tr>
+</table>
+
+</div>
+
+</body>
+</html>

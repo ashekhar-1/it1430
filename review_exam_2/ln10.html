@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lecture 10 - Work with Forms</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    background: #444;
+}
+
+nav button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #444;
+    color: white;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background: #666;
+}
+
+.section {
+    display: none;
+    padding: 20px;
+    background: white;
+    margin: 10px;
+}
+
+.active {
+    display: block;
+}
+
+.box {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.box:hover {
+    background: #e0f7fa;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+</style>
+
+<script>
+function showSection(id) {
+    let sections = document.getElementsByClassName("section");
+    for (let s of sections) s.classList.remove("active");
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Lecture 10: Work with Forms</h1>
+<p>Based on Lecture Slides</p>
+</header>
+
+<nav>
+<button onclick="showSection('gui')">GUI</button>
+<button onclick="showSection('forms')">Form Basics</button>
+<button onclick="showSection('attributes')">Form Attributes</button>
+<button onclick="showSection('inputs')">Input Types</button>
+<button onclick="showSection('checkbox')">Checkbox</button>
+<button onclick="showSection('radio')">Radio</button>
+<button onclick="showSection('select')">Select</button>
+<button onclick="showSection('textarea')">Textarea</button>
+<button onclick="showSection('advanced')">Advanced Controls</button>
+<button onclick="showSection('calculator')">Calculator</button>
+</nav>
+
+<!-- GUI -->
+<div id="gui" class="section active">
+<h2>Slide 2-4: GUI Concepts</h2>
+
+<p><b>GUI (Graphical User Interface)</b>: Users interact using visual widgets.</p>
+
+<div class="box">Button</div>
+<div class="box">Checkbox</div>
+<div class="box">Textbox</div>
+
+<p><b>Event Driven Programming:</b></p>
+<ul>
+<li>Program waits for user actions</li>
+<li>Examples: click, keypress, resize</li>
+</ul>
+
+<p><b>Object Lifecycle:</b></p>
+<ul>
+<li>Creation: design time / runtime</li>
+<li>Termination: runtime / program end</li>
+</ul>
+</div>
+
+<!-- FORM BASICS -->
+<div id="forms" class="section">
+<h2>Slide 5: HTML Form</h2>
+
+<p>A form collects user input and sends it to a server.</p>
+
+<form>
+<label>Email: <input type="text"></label>
+<input type="submit" value="Submit">
+</form>
+
+<p>Forms contain widgets like:</p>
+<ul>
+<li>Text fields</li>
+<li>Checkboxes</li>
+<li>Buttons</li>
+</ul>
+</div>
+
+<!-- FORM ATTRIBUTES -->
+<div id="attributes" class="section">
+<h2>Slide 6-7: Form Attributes</h2>
+
+<p><b>Important Attributes:</b></p>
+<ul>
+<li>action → where data is sent</li>
+<li>method → get or post</li>
+<li>name → identifier</li>
+</ul>
+
+<form action="#" method="get">
+<label>First Name: <input type="text" name="fname"></label>
+<input type="submit">
+</form>
+
+<p><b>GET:</b> visible in URL</p>
+<p><b>POST:</b> hidden and secure</p>
+</div>
+
+<!-- INPUT TYPES -->
+<div id="inputs" class="section">
+<h2>Slide 12-13: Input Types</h2>
+
+<label>Username: <input type="text" placeholder="Enter name"></label>
+<label>Password: <input type="password" maxlength="6"></label>
+
+<br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+<input type="button" value="Click Me" onclick="alert('Hello')">
+</div>
+
+<!-- CHECKBOX -->
+<div id="checkbox" class="section">
+<h2>Slide 14: Checkbox</h2>
+
+<form>
+<label><input type="checkbox" checked> Milk</label>
+<label><input type="checkbox"> Bread</label>
+<label><input type="checkbox"> Eggs</label>
+</form>
+
+<p>Multiple selections allowed</p>
+</div>
+
+<!-- RADIO -->
+<div id="radio" class="section">
+<h2>Slide 15: Radio Buttons</h2>
+
+<form>
+<label><input type="radio" name="age" checked> 0-19</label>
+<label><input type="radio" name="age"> 20-35</label>
+<label><input type="radio" name="age"> 36-50</label>
+</form>
+
+<p>Only one selection allowed</p>
+</div>
+
+<!-- SELECT -->
+<div id="select" class="section">
+<h2>Slide 16: Select Menu</h2>
+
+<select>
+<option>Milk</option>
+<option>Bread</option>
+<option>Eggs</option>
+</select>
+
+<p>Use multiple attribute for multi-select</p>
+</div>
+
+<!-- TEXTAREA -->
+<div id="textarea" class="section">
+<h2>Slide 17: Textarea</h2>
+
+<textarea rows="4" cols="40">
+Enter your aspirations
+</textarea>
+</div>
+
+<!-- ADVANCED -->
+<div id="advanced" class="section">
+<h2>Slide 19-22: Advanced Controls</h2>
+
+<label>Upload File: <input type="file"></label><br><br>
+<label>Date: <input type="date"></label><br><br>
+<label>Time: <input type="time"></label><br><br>
+<label>Color: <input type="color"></label><br><br>
+
+<form action="https://www.google.com/search">
+<input type="search" name="q" placeholder="Search Google">
+<input type="submit" value="Search">
+</form>
+</div>
+
+<!-- CALCULATOR -->
+<div id="calculator" class="section">
+<h2>Slide 23: Calculator Example</h2>
+
+<form onsubmit="return false">
+<input id="x" type="number" value="100"> +
+<input id="y" type="number" value="100"><br><br>
+
+<input type="button" value="Calculate"
+onclick="document.getElementById('result').value =
+parseInt(x.value) + parseInt(y.value)">
+
+<br><br>
+Total: <output id="result"></output>
+</form>
+
+</div>
+
+</body>
+</html>

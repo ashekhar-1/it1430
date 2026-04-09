@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 6 - Responsive Web Design Review</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+}
+
+nav {
+    background: #222;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+nav button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: #444;
+    color: white;
+    cursor: pointer;
+}
+nav button:hover {
+    background: #666;
+}
+
+.section {
+    display: none;
+    padding: 20px;
+    background: white;
+    margin: 20px;
+}
+.active {
+    display: block;
+}
+
+.example {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    background: #fafafa;
+}
+
+.columns {
+    column-count: 4;
+    column-gap: 20px;
+}
+
+.responsive-box {
+    background: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .responsive-box {
+        background: lightgreen;
+    }
+}
+
+.relative-box {
+    position: relative;
+    height: 150px;
+    border: 1px solid black;
+}
+.absolute-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: lightblue;
+    padding: 5px;
+}
+.fixed-box {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: orange;
+    padding: 5px;
+}
+</style>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</head>
+
+<body>
+
+<nav>
+<button onclick="showSection('rwd')">RWD</button>
+<button onclick="showSection('fluid')">Fluid Layout</button>
+<button onclick="showSection('columns')">Columns</button>
+<button onclick="showSection('position')">Position</button>
+<button onclick="showSection('viewport')">Viewport</button>
+<button onclick="showSection('media')">Media Query</button>
+</nav>
+
+<!-- RWD -->
+<div id="rwd" class="section active">
+<h2>Responsive Web Design</h2>
+<p><strong>Slide 2–3</strong></p>
+
+<h3>Theory</h3>
+<ul>
+<li>Responsive Web Design allows web pages to adapt to different screen sizes.</li>
+<li>By default, elements follow normal HTML flow with no floating or positioning.</li>
+<li>The three main components are:
+    <ul>
+        <li>Fluid Layout</li>
+        <li>Viewport Metadata</li>
+        <li>Media Queries</li>
+    </ul>
+</li>
+<li>Scalable images adjust to the size of their container.</li>
+</ul>
+
+<h3>Examples</h3>
+<div class="example">Desktop: multi-column layout</div>
+<div class="example">Mobile: single column layout</div>
+
+</div>
+
+<!-- Fluid Layout -->
+<div id="fluid" class="section">
+<h2>Fluid Layout and Floating</h2>
+<p><strong>Slide 4–10</strong></p>
+
+<h3>Theory</h3>
+<ul>
+<li>By default, elements appear in order with no wrapping.</li>
+<li>The float property allows elements to wrap around content.</li>
+<li>The clear property controls floating behavior.</li>
+<li>Fluid layouts use percentages instead of fixed pixels.</li>
+<li>Formula: (target ÷ context) × 100</li>
+</ul>
+
+<h3>Examples</h3>
+
+<div class="example">
+<div style="width:70%; float:left; background:#ddd;">Main</div>
+<div style="width:30%; float:right; background:#bbb;">Aside</div>
+<div style="clear:both;"></div>
+</div>
+
+<div class="example">
+570 ÷ 960 × 100 = 59.375%
+</div>
+
+</div>
+
+<!-- Columns -->
+<div id="columns" class="section">
+<h2>Text Columns</h2>
+<p><strong>Slide 12</strong></p>
+
+<h3>Theory</h3>
+<ul>
+<li>Browsers display text in a single column by default.</li>
+<li>CSS3 allows multi-column layouts.</li>
+<li>column-count defines number of columns.</li>
+<li>column-gap defines spacing.</li>
+<li>column-span allows elements to span across columns.</li>
+</ul>
+
+<h3>Examples</h3>
+
+<div class="example" style="column-count:2;">
+<p>Two column layout example.</p>
+</div>
+
+<div class="columns example">
+<p>Three column layout example.</p>
+<p>Content flows automatically.</p>
+</div>
+
+</div>
+
+<!-- Position -->
+<div id="position" class="section">
+<h2>Positioning</h2>
+<p><strong>Slide 13</strong></p>
+
+<h3>Theory</h3>
+<ul>
+<li>position property defines element placement.</li>
+<li>static: default position.</li>
+<li>relative: relative to original position.</li>
+<li>absolute: relative to nearest positioned ancestor.</li>
+<li>fixed: relative to viewport.</li>
+<li>top, bottom, left, right define placement.</li>
+</ul>
+
+<h3>Examples</h3>
+
+<div class="relative-box">
+<div class="absolute-box">Absolute Position</div>
+</div>
+
+<div class="fixed-box">Fixed</div>
+
+</div>
+
+<!-- Viewport -->
+<div id="viewport" class="section">
+<h2>Viewport</h2>
+<p><strong>Slide 15</strong></p>
+
+<h3>Theory</h3>
+<ul>
+<li>The viewport is the visible area of a webpage.</li>
+<li>It is smaller on mobile devices.</li>
+<li>Meta viewport controls scaling and layout.</li>
+<li>width=device-width matches screen width.</li>
+<li>initial-scale controls zoom level.</li>
+</ul>
+
+<h3>Example</h3>
+
+<pre>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+</pre>
+
+</div>
+
+<!-- Media Queries -->
+<div id="media" class="section">
+<h2>Media Queries</h2>
+<p><strong>Slide 16–20</strong></p>
+
+<h3>Theory</h3>
+<ul>
+<li>Media queries apply CSS based on device conditions.</li>
+<li>media types include screen, print, all.</li>
+<li>Common features include min-width and max-width.</li>
+<li>They enable responsive layouts.</li>
+</ul>
+
+<h3>Examples</h3>
+
+<pre>
+@media screen and (max-width:600px){
+ body { background: green; }
+}
+</pre>
+
+<div class="responsive-box">
+Resize screen to observe change
+</div>
+
+</div>
+
+</body>
+</html>
