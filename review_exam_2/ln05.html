@@ -1,82 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Lecture 5 - CSS Box Model</title>
+    <meta charset="UTF-8">
+    <title>Lecture 5 - CSS Box Model</title>
 
-<style>
-body { font-family: Arial; margin:0; background:#f4f4f4; }
-nav { background:#222; padding:10px; }
-nav button { color:white; background:none; border:none; margin-right:15px; cursor:pointer; }
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f4f4f4;
+        }
 
-.section { display:none; padding:20px; }
-.active { display:block; }
+        nav {
+            background: #222;
+            padding: 10px;
+        }
 
-.wrapper { margin:40px auto; width:300px; text-align:center; }
+        nav button {
+            color: white;
+            background: none;
+            border: none;
+            margin-right: 15px;
+            cursor: pointer;
+        }
 
-/* BOX STYLES */
-.margin-box { background:rgba(255,200,200,0.5); padding:20px; }
-.border-box { border:8px solid blue; padding:15px; }
-.padding-box { background:rgba(200,255,200,0.5); padding:20px; }
-.content-box { background:white; padding:20px; border:1px solid black; }
+        .section {
+            display: none;
+            padding: 20px;
+        }
 
-.dimension-box { width:200px; height:100px; background:lightblue; margin:auto; }
-.dimension-box:hover { width:250px; height:120px; }
+        .active {
+            display: block;
+        }
 
-.background-box {
-    width:200px; height:120px; margin:auto;
-    background:linear-gradient(to right, white, red);
-}
-.background-box:hover {
-    background:linear-gradient(45deg, red, white, blue);
-}
+        .wrapper {
+            margin: 40px auto;
+            width: 300px;
+            text-align: center;
+        }
 
-.example-box {
-    width:250px; margin:auto;
-    border:2px solid black; padding:10px;
-}
-.example-box h3, .example-box p {
-    border:1px dashed black;
-    padding:10px;
-}
+        /* BOX STYLES */
+        .margin-box {
+            background: rgba(255, 200, 200, 0.5);
+            padding: 20px;
+        }
 
-pre { background:#eee; padding:10px; overflow-x:auto; }
-</style>
+        .border-box {
+            border: 8px solid blue;
+            padding: 15px;
+        }
 
-<script>
-function showSection(id){
-    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-}
-</script>
+        .padding-box {
+            background: rgba(200, 255, 200, 0.5);
+            padding: 20px;
+        }
+
+        .content-box {
+            background: white;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        .dimension-box {
+            width: 200px;
+            height: 100px;
+            background: lightblue;
+            margin: auto;
+        }
+
+        .dimension-box:hover {
+            width: 250px;
+            height: 120px;
+            background: red;
+        }
+
+        .background-box {
+            width: 200px;
+            height: 120px;
+            margin: auto;
+            background: linear-gradient(to right, white, red);
+        }
+
+        .background-box:hover {
+            background: linear-gradient(45deg, red, white, blue);
+        }
+
+        .example-box {
+            width: 250px;
+            margin: auto;
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .example-box h3,
+        .example-box p {
+            border: 1px dashed black;
+            padding: 10px;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            overflow-x: auto;
+        }
+    </style>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
 
 </head>
 
 <body>
 
-<nav>
-<button onclick="showSection('dimensions')">Width & Height</button>
-<button onclick="showSection('margin')">Margin</button>
-<button onclick="showSection('padding')">Padding</button>
-<button onclick="showSection('border')">Border</button>
-<button onclick="showSection('background')">Background</button>
-<button onclick="showSection('example')">Example</button>
-</nav>
+    <nav>
+        <button onclick="showSection('dimensions')">Width & Height</button>
+        <button onclick="showSection('margin')">Margin</button>
+        <button onclick="showSection('padding')">Padding</button>
+        <button onclick="showSection('border')">Border</button>
+        <button onclick="showSection('background')">Background</button>
+        <button onclick="showSection('example')">Example</button>
+    </nav>
 
-<!-- WIDTH & HEIGHT -->
-<div id="dimensions" class="section active">
-<h2>Width & Height</h2>
-<p><strong>Slides 5 & 8</strong></p>
+    <!-- WIDTH & HEIGHT -->
+    <div id="dimensions" class="section active">
+        <h2>Width & Height</h2>
+        <p><strong>Slides 5 & 8</strong></p>
 
-<p><strong>Theory:</strong></p>
-<ul>
-<li>Total width = left margin + left border + left padding + content width + right padding + right border + right margin</li>
-<li>Total height = top margin + top border + top padding + content height + bottom padding + bottom border + bottom margin</li>
-<li>Width and height define the size of the content area</li>
-</ul>
+        <p><strong>Theory:</strong></p>
+        <ul>
+            <li>Total width = left margin + left border + left padding + content width + right padding + right border +
+                right margin</li>
+            <li>Total height = top margin + top border + top padding + content height + bottom padding + bottom border +
+                bottom margin</li>
+            <li>Width and height define the size of the content area</li>
+        </ul>
 
-<p><strong>Properties:</strong></p>
-<pre>
+        <p><strong>Properties:</strong></p>
+        <pre>
 width: 450px;
 width: 75%;
 width: auto;
@@ -91,24 +156,24 @@ min-height: 120px;
 max-height: 160px;
 </pre>
 
-<p><strong>Interactive Box:</strong></p>
-<div class="dimension-box"></div>
-</div>
+        <p><strong>Interactive Box:</strong></p>
+        <div class="dimension-box"></div>
+    </div>
 
-<!-- MARGIN -->
-<div id="margin" class="section">
-<h2>Margin</h2>
-<p><strong>Slide 9</strong></p>
+    <!-- MARGIN -->
+    <div id="margin" class="section">
+        <h2>Margin</h2>
+        <p><strong>Slide 9</strong></p>
 
-<p><strong>Theory:</strong></p>
-<ul>
-<li>Margin clears space outside the border</li>
-<li>It is transparent</li>
-<li>Used to create spacing between elements</li>
-</ul>
+        <p><strong>Theory:</strong></p>
+        <ul>
+            <li>Margin clears space outside the border</li>
+            <li>It is transparent</li>
+            <li>Used to create spacing between elements</li>
+        </ul>
 
-<p><strong>Properties:</strong></p>
-<pre>
+        <p><strong>Properties:</strong></p>
+        <pre>
 margin-top: .5em;
 margin-right: 1em;
 margin-bottom: 2em;
@@ -120,31 +185,31 @@ margin: 0 1em;
 margin: .5em 1em 2em;
 </pre>
 
-<div class="wrapper">
-<div class="margin-box">
-<div class="border-box">
-<div class="padding-box">
-<div class="content-box">Content</div>
-</div>
-</div>
-</div>
-</div>
+        <div class="wrapper">
+            <div class="margin-box">
+                <div class="border-box">
+                    <div class="padding-box">
+                        <div class="content-box">Content</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-</div>
+    </div>
 
-<!-- PADDING -->
-<div id="padding" class="section">
-<h2>Padding</h2>
-<p><strong>Slide 10</strong></p>
+    <!-- PADDING -->
+    <div id="padding" class="section">
+        <h2>Padding</h2>
+        <p><strong>Slide 10</strong></p>
 
-<p><strong>Theory:</strong></p>
-<ul>
-<li>Padding is space inside the border</li>
-<li>It surrounds the content</li>
-<li>It is transparent but affects layout size</li>
-</ul>
+        <p><strong>Theory:</strong></p>
+        <ul>
+            <li>Padding is space inside the border</li>
+            <li>It surrounds the content</li>
+            <li>It is transparent but affects layout size</li>
+        </ul>
 
-<pre>
+        <pre>
 padding-top: 0;
 padding-right: 1em;
 padding-bottom: .5em;
@@ -156,29 +221,29 @@ padding: 0 1em .5em;
 padding: 0 1em .5em 1em;
 </pre>
 
-<div class="wrapper">
-<div class="border-box">
-<div class="padding-box">
-<div class="content-box">Content</div>
-</div>
-</div>
-</div>
+        <div class="wrapper">
+            <div class="border-box">
+                <div class="padding-box">
+                    <div class="content-box">Content</div>
+                </div>
+            </div>
+        </div>
 
-</div>
+    </div>
 
-<!-- BORDER -->
-<div id="border" class="section">
-<h2>Border</h2>
-<p><strong>Slide 11</strong></p>
+    <!-- BORDER -->
+    <div id="border" class="section">
+        <h2>Border</h2>
+        <p><strong>Slide 11</strong></p>
 
-<p><strong>Theory:</strong></p>
-<ul>
-<li>Border surrounds padding and content</li>
-<li>It can have width, style, and color</li>
-<li>It is visible unlike margin and padding</li>
-</ul>
+        <p><strong>Theory:</strong></p>
+        <ul>
+            <li>Border surrounds padding and content</li>
+            <li>It can have width, style, and color</li>
+            <li>It is visible unlike margin and padding</li>
+        </ul>
 
-<pre>
+        <pre>
 border: 2px solid black;
 border-top: 2px solid black;
 border-right: 4px double blue;
@@ -191,27 +256,27 @@ border-radius: 10px;
 box-shadow: 3px 3px 4px red;
 </pre>
 
-<div class="wrapper">
-<div class="border-box">
-<div class="content-box">Content</div>
-</div>
-</div>
+        <div class="wrapper">
+            <div class="border-box">
+                <div class="content-box">Content</div>
+            </div>
+        </div>
 
-</div>
+    </div>
 
-<!-- BACKGROUND -->
-<div id="background" class="section">
-<h2>Background</h2>
-<p><strong>Slides 13–14</strong></p>
+    <!-- BACKGROUND -->
+    <div id="background" class="section">
+        <h2>Background</h2>
+        <p><strong>Slides 13–14</strong></p>
 
-<p><strong>Theory:</strong></p>
-<ul>
-<li>Background defines color or image behind content</li>
-<li>Can include gradients</li>
-<li>Can control repeat, position, and attachment</li>
-</ul>
+        <p><strong>Theory:</strong></p>
+        <ul>
+            <li>Background defines color or image behind content</li>
+            <li>Can include gradients</li>
+            <li>Can control repeat, position, and attachment</li>
+        </ul>
 
-<pre>
+        <pre>
 background: blue;
 background-image: url("image.jpg");
 
@@ -223,22 +288,22 @@ background: linear-gradient(to right, white, red);
 background: linear-gradient(45deg, red, white, blue);
 </pre>
 
-<div class="background-box"></div>
+        <div class="background-box"></div>
 
-</div>
+    </div>
 
-<!-- EXAMPLE -->
-<div id="example" class="section">
-<h2>Complete Example</h2>
-<p><strong>Slide 6</strong></p>
+    <!-- EXAMPLE -->
+    <div id="example" class="section">
+        <h2>Complete Example</h2>
+        <p><strong>Slide 6</strong></p>
 
-<p><strong>Theory:</strong></p>
-<ul>
-<li>Demonstrates margin, padding, and border together</li>
-<li>Shows how layout is structured using box model</li>
-</ul>
+        <p><strong>Theory:</strong></p>
+        <ul>
+            <li>Demonstrates margin, padding, and border together</li>
+            <li>Shows how layout is structured using box model</li>
+        </ul>
 
-<pre>
+        <pre>
 body { 
     border: 3px dotted black; 
     margin: 10px;
@@ -257,12 +322,13 @@ h1, p {
 }
 </pre>
 
-<div class="example-box">
-<h3>San Joaquin Valley Town Hall</h3>
-<p>Welcome to the lecture example.</p>
-</div>
+        <div class="example-box">
+            <h3>San Joaquin Valley Town Hall</h3>
+            <p>Welcome to the lecture example.</p>
+        </div>
 
-</div>
+    </div>
 
 </body>
+
 </html>
