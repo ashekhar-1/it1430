@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced CSS Revision - Lecture 09</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+.section {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+.nav button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Hide sections */
+.content {
+    display: none;
+}
+
+/* Active */
+.active {
+    display: block;
+}
+
+/* TRANSITION DEMO */
+.transition-box {
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    transition: all 2s ease-in-out;
+}
+
+.transition-box:hover {
+    background-color: red;
+    transform: scale(1.2);
+}
+
+/* ACCORDION */
+.accordion div {
+    height: 0;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.accordion div:target {
+    height: 100px;
+}
+
+/* TRANSFORM DEMO */
+.transform-box {
+    width: 100px;
+    height: 100px;
+    background: teal;
+    margin: 20px;
+    transition: 1s;
+}
+
+.transform-box:hover {
+    transform: rotate(45deg) scale(1.2);
+}
+
+/* ANIMATION */
+@keyframes demoright {
+    from { margin-left: 0%; color: blue; }
+    to { margin-left: 50%; color: red; }
+}
+
+.animation-box {
+    animation: demoright 3s infinite alternate;
+}
+
+/* FILTER */
+.filter-img {
+    width: 200px;
+    transition: 0.5s;
+}
+
+.filter-img:hover {
+    filter: invert(0.8);
+}
+</style>
+
+<script>
+function showSection(id) {
+    let sections = document.getElementsByClassName("content");
+    for (let i = 0; i < sections.length; i++) {
+        sections[i].classList.remove("active");
+    }
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Lecture 09: Advanced CSS (Chapter 14)</h1>
+
+<div class="nav">
+    <button onclick="showSection('transitions')">Transitions</button>
+    <button onclick="showSection('accordion')">Accordion</button>
+    <button onclick="showSection('transform')">Transform</button>
+    <button onclick="showSection('animation')">Animation</button>
+    <button onclick="showSection('filters')">Filters</button>
+</div>
+
+<!-- TRANSITIONS -->
+<div id="transitions" class="content active section">
+<h2>Slide 3-4: CSS Transitions</h2>
+
+<p>
+CSS transitions allow property values to change smoothly over time.
+</p>
+
+<ul>
+<li>transition-property</li>
+<li>transition-duration</li>
+<li>transition-timing-function</li>
+<li>transition-delay</li>
+</ul>
+
+<p>
+Shorthand: transition: property duration timing-function delay;
+</p>
+
+<h3>Example (Hover Below)</h3>
+
+<div class="transition-box">
+Hover me
+</div>
+
+<p>
+Element: div<br>
+Initial: blue<br>
+Target: red + scaled<br>
+Duration: 2s<br>
+Trigger: hover
+</p>
+</div>
+
+<!-- ACCORDION -->
+<div id="accordion" class="content section">
+<h2>Slide 5: Accordion using Transitions</h2>
+
+<div class="accordion">
+<h3><a href="#q1">What is CSS?</a></h3>
+<div id="q1">CSS styles web pages.</div>
+
+<h3><a href="#q2">Why transitions?</a></h3>
+<div id="q2">To create smooth UI effects.</div>
+
+<h3><a href="#q3">Event trigger?</a></h3>
+<div id="q3">Hover, click, etc.</div>
+</div>
+</div>
+
+<!-- TRANSFORM -->
+<div id="transform" class="content section">
+<h2>Slide 6-8: 2D Transformations</h2>
+
+<ul>
+<li>rotate()</li>
+<li>scale()</li>
+<li>skew()</li>
+<li>translate()</li>
+<li>matrix()</li>
+</ul>
+
+<p>Hover the box:</p>
+
+<div class="transform-box"></div>
+
+<p>
+Transform: rotate + scale<br>
+Transition duration: 1s
+</p>
+</div>
+
+<!-- ANIMATION -->
+<div id="animation" class="content section">
+<h2>Slide 10-11: CSS Animation</h2>
+
+<ul>
+<li>@keyframes</li>
+<li>animation-name</li>
+<li>animation-duration</li>
+<li>animation-delay</li>
+<li>iteration-count</li>
+<li>direction</li>
+</ul>
+
+<h3>Example</h3>
+
+<div class="animation-box">
+Moving Text
+</div>
+
+<p>
+Animation: moveright<br>
+Duration: 3s<br>
+Infinite loop<br>
+Alternate direction
+</p>
+</div>
+
+<!-- FILTER -->
+<div id="filters" class="content section">
+<h2>Slide 12-13: CSS Filters</h2>
+
+<ul>
+<li>blur()</li>
+<li>brightness()</li>
+<li>contrast()</li>
+<li>invert()</li>
+<li>opacity()</li>
+<li>sepia()</li>
+</ul>
+
+<h3>Example</h3>
+
+<img src="https://plus.unsplash.com/premium_photo-1776274754786-5577986fedc8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="filter-img">
+
+<p>
+Hover effect: invert filter applied
+</p>
+</div>
+
+</body>
+</html>
