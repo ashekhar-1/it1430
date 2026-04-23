@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <div class="header">
+            <h1>Expense Tracker</h1>
+            <h2 class="total-display">Total: $<span id="totalDisplay">0.00</span></h2>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="itemName" placeholder="Item Name (e.g., Lunch)">
+            <input type="number" id="itemPrice" placeholder="Price (e.g., 15.50)">
+            <button class="add-btn" onclick="addExpense()">Add Item</button>
+        </div>
+
+        <ul id="expenseList">
+        </ul>
+
+        <div class="bank-section">
+            <h3>Bank Balances</h3>
+            <p id="bankStatus">Not connected.</p>
+            <button class="bank-btn" onclick="syncBank()">Sync with Bank Server</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
